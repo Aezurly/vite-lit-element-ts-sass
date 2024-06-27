@@ -3,7 +3,7 @@
 import styles from './my-element.scss?inline';
 import { LitElement, html, unsafeCSS } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
-import litLogo from './assets/lit.svg?inline';
+import litLogo from './assets/Logotix-Bluetext.svg';
 
 /**
  * An example element.
@@ -21,37 +21,26 @@ export class MyElement extends LitElement {
    * Copy for the read the docs hint.
    */
   @property()
-  docsHint = 'Click on the Vite and Lit logos to learn more'
+  docsHint = 'Exemple de texte'
 
-  /**
-   * The number of times the button has been clicked.
-   */
-  @property({ type: Number })
-  count = 0
 
   render() {
     return html`
       <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" class="logo" alt="Vite logo" />
-        </a>
-        <a href="https://lit.dev" target="_blank">
-          <img src=${litLogo} class="logo lit" alt="Lit logo" />
+        <a href="https://www.stanrobotix6622.com/" target="_blank">
+          <img src=${litLogo} class="logo" alt="logo" />
         </a>
       </div>
       <slot></slot>
       <div class="card">
-        <button @click=${this._onClick} part="button">
-          count is ${this.count}
+        <button part="button">
+          Click
         </button>
       </div>
       <p class="read-the-docs">${this.docsHint}</p>
     `
   }
 
-  private _onClick() {
-    this.count++
-  }
 }
 
 declare global {

@@ -4,16 +4,8 @@ import { defineConfig } from 'vite'
 
 // Library build
 export default defineConfig({
-  build: {
-    lib: {
-      entry: 'src/my-element.ts',
-      formats: ['es']
-    },
-    minify: false,
-    rollupOptions: {
-      external: /^lit/
-    }
-  }
+  base:'/vite-lit-element-ts-sass/',
+  
 });
 
 // Application build
