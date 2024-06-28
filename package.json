@@ -14,7 +14,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "npm run build && gh-pages -d dist"
   },
   "dependencies": {
     "lit": "^2.3.0"
@@ -22,6 +23,7 @@
   "devDependencies": {
     "sass": "^1.77.6",
     "typescript": "^4.6.4",
-    "vite": "^3.0.8"
+    "vite": "^3.0.8",
+    "gh-pages": "^3.2.3"
   }
 }
